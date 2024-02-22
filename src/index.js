@@ -124,7 +124,8 @@ Promise.all([
                                 lookUpProperty: 'value',
                                 lut: new LUT({
                                     interpolate: true,
-                                    steps: regularColorSteps(0, 100, theme.examples.intensityColorPalette),
+                                    percentageValues: true,
+                                    steps: regularColorSteps(0, 1, theme.examples.intensityColorPalette),
                                 }),
                             }),
                         )
