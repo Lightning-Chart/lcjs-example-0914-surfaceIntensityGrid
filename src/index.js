@@ -110,7 +110,7 @@ Promise.all([
                 selectorColorShadingStyle.setText(`Color shading style: ${state ? 'Phong' : 'Simple'}`)
             }
             const selectorColorShadingStyle = layout.addElement(UIElementBuilders.CheckBox)
-            selectorColorShadingStyle.onSwitch((_, state) => toggleColorShadingStyle(state))
+            selectorColorShadingStyle.addEventListener('switch', (event) => toggleColorShadingStyle(event.state))
             toggleColorShadingStyle(false)
 
             // Add selector for wireframe only style.
@@ -136,7 +136,7 @@ Promise.all([
                 selectorWireframe.setText(state ? `Wireframe only` : 'Fill + Wireframe')
             }
             const selectorWireframe = layout.addElement(UIElementBuilders.CheckBox)
-            selectorWireframe.onSwitch((_, state) => toggleWireframeStyle(state))
+            selectorWireframe.addEventListener('switch', (event) => toggleWireframeStyle(event.state))
             toggleWireframeStyle(false)
 
             // Add legend.
