@@ -13,7 +13,6 @@ const {
     LUT,
     PalettedFill,
     ColorShadingStyles,
-    LegendBoxBuilders,
     UIElementBuilders,
     UIOrigins,
     UIDraggingModes,
@@ -138,9 +137,6 @@ Promise.all([
             const selectorWireframe = layout.addElement(UIElementBuilders.CheckBox)
             selectorWireframe.addEventListener('switch', (event) => toggleWireframeStyle(event.state))
             toggleWireframeStyle(false)
-
-            // Add legend.
-            const legend = chart.addLegendBox(LegendBoxBuilders.HorizontalLegendBox).add(chart)
         })
     })
 })
